@@ -56,3 +56,31 @@ questionContainer.addEventListener("mouseout", () => {
 response.addEventListener("mouseover", () => {
     response.style.transform = "rotate(4deg)"
 })
+
+//--------------------------------------------------------
+//KeyPress event 
+
+const KeyPressContainer = document.querySelector('.keypress');
+const key = document.getElementById("key");
+const ring =() => {
+    const audio = new Audio();
+    audio.src = "./punch 1.mp3";
+    audio.play();
+}
+
+document.addEventListener('keypress', (e) => {
+    key.textContent = e.key;
+
+    if(e.key === "d") {
+        KeyPressContainer.style.background = "pink";
+        ring();
+    } else if (e.key === "j") {
+        KeyPressContainer.style.background = "teal";
+        ring();
+    } else {
+        KeyPressContainer.style.background = "red";
+    }
+
+    
+})
+
