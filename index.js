@@ -96,4 +96,36 @@ window.addEventListener('scroll', () => {
     }
 })
 
-//---------------------------------------------------
+//-------------------------------------------------------
+
+
+const inputName = document.querySelector('input[type="text"]');
+const select = document.querySelector("select")
+const form = document.querySelector("form")
+
+let language= "";
+let pseudo = "";
+
+inputName.addEventListener("input", (e) => {
+    pseudo= e.target.value;
+})
+
+select.addEventListener("input", (e) => {
+    language = e.target.value;
+})
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    console.log(cgv.checked);
+    
+    if (cgv.checked) {
+        document.querySelector('form > div').innerHTML = `
+        <h3>${pseudo}</h3>
+        <h4>est ${language}</h4>
+        `;
+
+    } else {
+      alert("Tu ne peux pas aller contre la réalité, accepte le, je te domine, coche cette case")
+    }
+})
