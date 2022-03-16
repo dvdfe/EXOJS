@@ -24,3 +24,14 @@ wrongResponse.addEventListener("click", () => {
     questionContainer.classList.toggle("wrong")
     response.style.visibility = 'visible'
 });
+
+//div < #id < class < balise html
+//-------------------------------------------------------------
+// Mouse Events
+
+const mousemouve = document.querySelector(".mousemove")
+
+window.addEventListener('mousemove', (e) => {
+    mousemouve.style.left = e.pageX + "px";
+    mousemouve.style.top = e.pageY + "px";
+})
