@@ -116,10 +116,8 @@ select.addEventListener("input", (e) => {
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-
-    console.log(cgv.checked);
     
-    if (cgv.checked) {
+    if (cgv.checked){
         document.querySelector('form > div').innerHTML = `
         <h3>${pseudo}</h3>
         <h4>est ${language}</h4>
