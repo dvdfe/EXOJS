@@ -119,11 +119,11 @@ form.addEventListener("submit", (e) => {
     
     if (cgv.checked){
         document.querySelector('form > div').innerHTML = `
-        <h3>${pseudo}</h3>
-        <h4>est ${language}</h4>
+        <h3>nom:${pseudo}</h3>
+        <h4>langage préféré: ${language}</h4>
         `;
 
     } else {
-      alert("Tu ne peux pas aller contre la réalité, accepte le, je te domine, coche cette case")
+      alert("Acceptez les CGV")
     }
 })
