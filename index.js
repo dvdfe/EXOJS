@@ -45,13 +45,13 @@ window.addEventListener("mouseup", () => {
     mousemouve.style.border = "2px solid teal";
 }); 
 
-questionContainer.addEventListener("mouseenter", () => {
-    questionContainer.style.background = "rgba(0,0,0,0.6)";
-})
+//questionContainer.addEventListener("mouseenter", () => {
+//    questionContainer.style.background = "rgba(0,0,0,0.6)";
+//})
 
-questionContainer.addEventListener("mouseout", () => {
-    questionContainer.style.background = "pink";
-})
+//questionContainer.addEventListener("mouseout", () => {
+//    questionContainer.style.background = "pink";
+//})
 
 response.addEventListener("mouseover", () => {
     response.style.transform = "rotate(4deg)"
@@ -136,13 +136,90 @@ window.addEventListener("load", () => {
 
 //----------------------------------------------------
 //ForEach
-const boxes = document.querySelectorAll(".box");
-boxes.forEach((box) => {
-    box.addEventListener("click", (e) => {
-        e.target.style.transform = "scale(0.7)";
-    });
-});
+//const boxes = document.querySelectorAll(".box");
+//boxes.forEach((box) => {
+//    box.addEventListener("click", (e) => {
+//        e.target.style.transform = "scale(0.7)";
+//    });
+//});
 
+//----------------------------------------------------
+// BOM
+//Ouvrir une fenêtre popup
+//window.open("http://google.com", "cours js", "height=300", "width=400");
 
-        
+//Evénments adossés à window
+//alert("hello")
 
+//confirm
+wrongResponse.addEventListener("click", ()=>{
+    confirm("Voulez vous vraiment vous tromper?")
+})
+
+ //prompt
+ goodResponse.addEventListener("click", () =>{
+     let answer = prompt("Entre votre nom !"); 
+     questionContainer.innerHTML+= "<h3>Bravo " + answer + "</h3>"
+ })       
+
+setTimeout(() => {
+    questionContainer.style.borderRadius = "1000px"
+}, 2000);
+
+//let interval=setInterval(() => {
+//    document.body.innerHTML+= `
+//    <div class='box'>
+//    <h2>Nouvelle Boite!</h2>
+//    </div>
+//    `  
+//}, 100000);
+
+document.body.addEventListener("click", ()=>{
+    clearInterval(interval)
+})
+
+//Enlever un élément en cliquant dessus
+//document.body.addEventListener('click', (e) =>{
+//    e.target.remove();
+//})
+
+// Location
+//console.log(location.href)
+//console.log(location.host)
+//console.log(location.pathname)
+//console.log(location.search)
+//location.replace("http://lequipe.fr");
+
+//Navigator
+//console.log(navigator.userAgent);
+
+//https://developer.mozilla.org/fr/docs/Web/API/Geolocation/getCurrentPosition
+
+//var options = {
+//    enableHighAccuracy: true,
+//    timeout: 5000,
+//    maximumAge: 0
+// };
+  
+//  function success(pos) {
+//    var crd = pos.coords;
+  
+//    console.log('Votre position actuelle est :');
+//    console.log(`Latitude : ${crd.latitude}`);
+//    console.log(`Longitude : ${crd.longitude}`);
+//    console.log(`La précision est de ${crd.accuracy} mètres.`);
+//  }
+  
+//  function error(err) {
+//    console.warn(`ERREUR (${err.code}): ${err.message}`);
+//  }
+  
+//  navigator.geolocation.getCurrentPosition(success, error, options);
+
+//History
+//console.log(history);
+//window.history.back();
+//history.go(-2);
+
+//------------------------------------------------------------------
+//SetProperty
