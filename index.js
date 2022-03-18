@@ -97,7 +97,7 @@ window.addEventListener('scroll', () => {
 })
 
 //-------------------------------------------------------
-
+//Form Event
 
 const inputName = document.querySelector('input[type="text"]');
 const select = document.querySelector("select")
@@ -119,11 +119,30 @@ form.addEventListener("submit", (e) => {
     
     if (cgv.checked){
         document.querySelector('form > div').innerHTML = `
-        <h3>nom:${pseudo}</h3>
-        <h4>langage préféré: ${language}</h4>
+        <h3>Pseudo:${pseudo}</h3>
+        <h4>Langage préféré: ${language}</h4>
         `;
 
     } else {
-      alert("Acceptez les CGV")
+      alert("Veuillez acceptez les CGV")
     }
 })
+
+//----------------------------------------------------
+//Load Event
+window.addEventListener("load", () => {
+    console.log("Document chargé !");
+})
+
+//----------------------------------------------------
+//ForEach
+const boxes = document.querySelectorAll(".box");
+boxes.forEach((box) => {
+    box.addEventListener("click", (e) => {
+        e.target.style.transform = "scale(0.7)";
+    });
+});
+
+
+        
+
